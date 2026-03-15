@@ -5,29 +5,34 @@
 
 .list {
   display: flex;
-  gap: var(--ds-size-4);
-  justify-content: center;
   list-style: none;
-  margin: 0;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
   padding: 0;
+}
+
+.list > li {
+  flex: 1;
 }
 
 .link {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--ds-size-2);
   padding: var(--ds-size-3) var(--ds-size-4);
   text-decoration: none;
   color: var(--ds-color-neutral-text-subtle);
   border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
+
 }
 
 .link:hover {
   color: var(--ds-color-neutral-text-default);
 }
 
-.active {
+.active,
+.active:hover {
   color: var(--ds-color-base-default);
   border-bottom-color: var(--ds-color-base-default);
 }
