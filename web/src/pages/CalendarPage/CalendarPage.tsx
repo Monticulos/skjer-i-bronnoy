@@ -11,11 +11,14 @@ import styles from "./CalendarPage.module.css";
 const CALENDAR_PLUGINS = [timeGridPlugin];
 const SLOT_MIN_TIME = "06:00:00";
 const SLOT_DURATION = "01:00:00";
+const DAY_HEADER_FORMAT: Intl.DateTimeFormatOptions = {
+  weekday: "short",
+  day: "numeric",
+  month: "numeric",
+};
+
 function formatDayHeader(arg: { date: Date }) {
-  const weekday = arg.date.toLocaleDateString("nb-NO", { weekday: "short" });
-  const day = arg.date.getDate();
-  const month = arg.date.getMonth() + 1;
-  return `${weekday} ${day}.${month}`;
+  return arg.date.toLocaleDateString("nb-NO", DAY_HEADER_FORMAT);
 }
 
 export default function CalendarPage() {

@@ -3,6 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import ListPage from "./pages/ListPage/ListPage";
+import CalendarPage from "./pages/CalendarPage/CalendarPage";
 import type { EventsData } from "./types/event";
 
 const MOCK_EVENTS_DATA: EventsData = {
@@ -19,6 +20,19 @@ const MOCK_EVENTS_DATA: EventsData = {
   ],
 };
 
+function renderApp(initialRoute = "/") {
+  return render(
+    <MemoryRouter initialEntries={[initialRoute]}>
+      <Routes>
+        <Route element={<App />}>
+          <Route index element={<ListPage />} />
+          <Route path="calendar" element={<CalendarPage />} />
+        </Route>
+      </Routes>
+    </MemoryRouter>
+  );
+}
+
 describe("App", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
@@ -30,15 +44,7 @@ describe("App", () => {
       json: () => Promise.resolve(MOCK_EVENTS_DATA),
     } as Response);
 
-    render(
-      <MemoryRouter>
-        <Routes>
-          <Route element={<App />}>
-            <Route index element={<ListPage />} />
-          </Route>
-        </Routes>
-      </MemoryRouter>
-    );
+    renderApp();
 
     await waitFor(() => {
       expect(screen.getByText("Mock Event")).toBeInTheDocument();
@@ -48,15 +54,7 @@ describe("App", () => {
   it("shows error when fetch fails", async () => {
     vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Failed to fetch"));
 
-    render(
-      <MemoryRouter>
-        <Routes>
-          <Route element={<App />}>
-            <Route index element={<ListPage />} />
-          </Route>
-        </Routes>
-      </MemoryRouter>
-    );
+    renderApp();
 
     await waitFor(() => {
       expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();
