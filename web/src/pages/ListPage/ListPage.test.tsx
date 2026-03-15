@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route, Outlet } from "react-router-dom";
 import type { ViewOutletContext } from "../../types/outletContext";
 import { createEvent } from "../../test/factories";
@@ -22,28 +22,14 @@ function renderListPage(context: ViewOutletContext) {
 }
 
 describe("ListPage", () => {
-  it("shows a spinner while loading", () => {
-    renderListPage({ events: [], loading: true, error: null });
-
-    expect(screen.getByLabelText("Laster arrangementer")).toBeInTheDocument();
-  });
-
-  it("shows an error message on failure", () => {
-    renderListPage({ events: [], loading: false, error: "Network error" });
-
-    expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();
-  });
-
-  it("renders events when loaded", async () => {
+  it("renders events", () => {
     const futureEvent = createEvent({
       title: "Future Event",
       startDate: "2099-06-20T18:00:00Z",
     });
 
-    renderListPage({ events: [futureEvent], loading: false, error: null });
+    renderListPage({ events: [futureEvent] });
 
-    await waitFor(() => {
-      expect(screen.getByText("Future Event")).toBeInTheDocument();
-    });
+    expect(screen.getByText("Future Event")).toBeInTheDocument();
   });
 });

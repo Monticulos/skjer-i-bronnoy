@@ -1,7 +1,8 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route, Outlet } from "react-router-dom";
 import type { ViewOutletContext } from "../../types/outletContext";
+import { createEvent } from "../../test/factories";
 import CalendarPage from "./CalendarPage";
 
 function renderCalendarPage(context: ViewOutletContext) {
@@ -21,23 +22,21 @@ function renderCalendarPage(context: ViewOutletContext) {
 }
 
 describe("CalendarPage", () => {
-  it("shows a spinner while loading", () => {
-    renderCalendarPage({ events: [], loading: true, error: null });
-
-    expect(screen.getByLabelText("Laster kalender")).toBeInTheDocument();
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
-  it("shows an error message on failure", () => {
-    renderCalendarPage({ events: [], loading: false, error: "Server error" });
+  it("renders an event in the calendar", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2025-06-15T12:00:00Z"));
 
-    expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();
-    expect(screen.getByText(/Server error/)).toBeInTheDocument();
-  });
+    const event = createEvent({
+      title: "Konsert på Kred",
+      startDate: "2025-06-15T19:00:00Z",
+    });
 
-  it("renders the calendar when events are loaded", () => {
-    renderCalendarPage({ events: [], loading: false, error: null });
+    renderCalendarPage({ events: [event] });
 
-    expect(screen.queryByLabelText("Laster kalender")).not.toBeInTheDocument();
-    expect(screen.queryByText(/Kunne ikke laste data/)).not.toBeInTheDocument();
+    expect(screen.getByText("Konsert på Kred")).toBeInTheDocument();
   });
 });

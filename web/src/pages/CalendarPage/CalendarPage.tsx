@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useOutletContext } from "react-router-dom";
-import { Spinner, Alert } from "@digdir/designsystemet-react";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import nbLocale from "@fullcalendar/core/locales/nb";
@@ -22,20 +21,8 @@ function formatDayHeader(arg: { date: Date }) {
 }
 
 export default function CalendarPage() {
-  const { events, loading, error } = useOutletContext<ViewOutletContext>();
+  const { events } = useOutletContext<ViewOutletContext>();
   const calendarEvents = useMemo(() => mapEventsToCalendar(events), [events]);
-
-  if (loading) {
-    return (
-      <div className={styles.loadingContainer}>
-        <Spinner aria-label="Laster kalender" />
-      </div>
-    );
-  }
-
-  if (error) {
-    return <Alert data-color="danger">Kunne ikke laste data. {error}</Alert>;
-  }
 
   return (
     <div className={styles.container}>

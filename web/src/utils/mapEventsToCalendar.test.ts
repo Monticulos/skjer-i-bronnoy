@@ -1,16 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { mapEventsToCalendar } from "./mapEventsToCalendar";
-import type { Event } from "../types/event";
-
-const createEvent = (overrides: Partial<Event> = {}): Event => ({
-  id: "1",
-  title: "Test Event",
-  description: "A test event",
-  category: "musikk",
-  startDate: "2026-03-20T18:00:00Z",
-  collectedAt: "2026-03-15T12:00:00Z",
-  ...overrides,
-});
+import { createEvent } from "../test/factories";
 
 describe("mapEventsToCalendar", () => {
   it("maps all fields for a complete event", () => {
@@ -27,14 +17,14 @@ describe("mapEventsToCalendar", () => {
     expect(result).toEqual([
       {
         id: "1",
-        title: "Test Event",
-        start: "2026-03-20T18:00:00Z",
+        title: "Quiz Night",
+        start: "2025-06-15T19:00:00Z",
         end: "2026-03-20T20:00:00Z",
         url: "https://example.com/event",
         extendedProps: {
-          category: "musikk",
+          category: "quiz",
           location: "Kulturhuset",
-          description: "A test event",
+          description: "Weekly pub quiz",
         },
       },
     ]);

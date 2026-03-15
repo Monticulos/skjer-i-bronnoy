@@ -4,11 +4,11 @@ import EventList from "../../components/EventList/EventList";
 import styles from "./ListPage.module.css";
 
 export default function ListPage() {
-  const { events, loading, error } = useOutletContext<ViewOutletContext>();
+  const { events } = useOutletContext<ViewOutletContext>();
 
   return (
     <div className={styles.container}>
-      <EventList events={events} loading={loading} error={error} />
+      <EventList events={events} />
     </div>
   );
 }

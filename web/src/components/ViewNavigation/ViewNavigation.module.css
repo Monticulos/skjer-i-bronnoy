@@ -24,7 +24,6 @@
   text-decoration: none;
   color: var(--ds-color-neutral-text-subtle);
   border-bottom: 2px solid transparent;
-
 }
 
 .link:hover {

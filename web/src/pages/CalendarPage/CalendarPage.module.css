@@ -75,10 +75,3 @@
     padding: 0 var(--ds-size-4);
   }
 }
-
-.loadingContainer {
-  display: flex;
-  height: 35vh;
-  justify-content: center;
-  padding: var(--ds-size-9) 0;
-}
