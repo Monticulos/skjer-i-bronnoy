@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "setup": "npm install --prefix web && npm install --prefix collector",
+    "web": "npm run dev --prefix web",
+    "collector": "npm start --prefix collector",
+    "test": "npm test --prefix web && npm test --prefix collector",
+    "lint": "npm run lint --prefix web && npm run lint --prefix collector",
+    "typecheck": "npm run typecheck --prefix web && npm run typecheck --prefix collector"
+  }
+}

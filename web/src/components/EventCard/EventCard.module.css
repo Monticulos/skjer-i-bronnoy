@@ -1,0 +1,35 @@
+.headingBlock {
+  padding-top: var(--ds-size-5); /* Compensates for the added padding from StarIcon */
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metaLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-size-3);
+  flex-wrap: wrap;
+}
+
+.date {
+  font-size: var(--ds-body-xs-font-size);
+  color: var(--ds-color-neutral-text-subtle);
+}
+
+.heading {
+  margin-block: var(--ds-size-1);
+}
+
+.description {
+  white-space: pre-line;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
