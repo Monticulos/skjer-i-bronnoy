@@ -1,0 +1,33 @@
+.nav {
+  background-color: var(--ds-color-neutral-background-default);
+  border-bottom: 1px solid var(--ds-color-neutral-border-subtle);
+}
+
+.list {
+  display: flex;
+  gap: var(--ds-size-4);
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-size-2);
+  padding: var(--ds-size-3) var(--ds-size-4);
+  text-decoration: none;
+  color: var(--ds-color-neutral-text-subtle);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.link:hover {
+  color: var(--ds-color-neutral-text-default);
+}
+
+.active {
+  color: var(--ds-color-base-default);
+  border-bottom-color: var(--ds-color-base-default);
+}

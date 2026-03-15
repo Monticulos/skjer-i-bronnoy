@@ -1,6 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
+import ListPage from "./pages/ListPage/ListPage";
 import type { EventsData } from "./types/event";
 
 const MOCK_EVENTS_DATA: EventsData = {
@@ -28,7 +30,15 @@ describe("App", () => {
       json: () => Promise.resolve(MOCK_EVENTS_DATA),
     } as Response);
 
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <Routes>
+          <Route element={<App />}>
+            <Route index element={<ListPage />} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    );
 
     await waitFor(() => {
       expect(screen.getByText("Mock Event")).toBeInTheDocument();
@@ -38,7 +48,15 @@ describe("App", () => {
   it("shows error when fetch fails", async () => {
     vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Failed to fetch"));
 
-    render(<App />);
+    render(
+      <MemoryRouter>
+        <Routes>
+          <Route element={<App />}>
+            <Route index element={<ListPage />} />
+          </Route>
+        </Routes>
+      </MemoryRouter>
+    );
 
     await waitFor(() => {
       expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();

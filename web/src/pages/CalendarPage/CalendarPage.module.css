@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+}
+
+.container :global(.fc-button) {
+  --fc-button-bg-color: white;
+  --fc-button-text-color: var(--ds-color-base-default);
+  --fc-button-border-color: var(--ds-color-border-strong);
+  --fc-button-hover-bg-color: var(--ds-color-accent-surface-tinted);
+  --fc-button-hover-border-color: var(--ds-color-border-strong);
+  --fc-button-active-bg-color: transparent;
+  --fc-button-active-border-color: transparent;
+}
+
+.container :global(.fc-button-active) {
+  background-color: var(--ds-color-base-default) !important;
+  border-color: var(--ds-color-base-default) !important;
+  color: var(--ds-color-base-contrast-default) !important;
+}
+
+.container :global(.fc-button:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--ds-color-border-strong) !important;
+}
+
+.container :global(.fc-button:focus-visible) {
+  outline: 2px solid black !important;
+  outline-offset: 2px;
+}
+
+.container :global(.fc-button-active:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.container :global(.fc-button-active:focus-visible) {
+  outline: 2px solid black !important;
+  outline-offset: 2px;
+}
+
+.container :global(.fc-scrollgrid) {
+  background-color: white;
+  border: 1px solid var(--ds-color-border-subtle) !important;
+  border-radius: var(--ds-border-radius-md);
+  overflow: hidden;
+}
+
+.container :global(.fc-col-header-cell) {
+  color: var(--ds-color-text-default);
+}
+
+.container :global(.fc-timegrid-slot-label) {
+  font-size: var(--ds-font-size-3);
+}
+
+.container :global(.fc-day-today) {
+  background-color: white !important;
+}
+
+.container :global(.fc-toolbar-title) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container :global(.fc-toolbar-title) {
+    display: block;
+    font-size: var(--ds-font-size-6);
+    color: var(--ds-color-neutral-text-subtle);
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    padding: 0 var(--ds-size-4);
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  height: 35vh;
+  justify-content: center;
+  padding: var(--ds-size-9) 0;
+}
