@@ -1,47 +1,32 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
-import App from "./App";
-import type { EventsData } from "./types/event";
+import { describe, it, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
 
-const MOCK_EVENTS_DATA: EventsData = {
-  updatedAt: "2025-06-15T12:00:00Z",
-  events: [
-    {
-      id: "1",
-      title: "Mock Event",
-      description: "A mock event",
-      category: "annet",
-      startDate: "2099-06-20T18:00:00Z",
-      collectedAt: "2025-06-01T00:00:00Z",
-    },
-  ],
-};
+function renderApp(initialRoute = "/") {
+  const router = createMemoryRouter(routes, {
+    initialEntries: [initialRoute],
+  });
+  return render(<RouterProvider router={router} />);
+}
 
 describe("App", () => {
-  beforeEach(() => {
-    vi.restoreAllMocks();
+  it("renders the navigation", () => {
+    renderApp();
+
+    expect(screen.getByRole("link", { name: /liste/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /kalender/i })).toBeInTheDocument();
   });
 
-  it("fetches events.json on mount and renders events", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue({
-      ok: true,
-      json: () => Promise.resolve(MOCK_EVENTS_DATA),
-    } as Response);
+  it("renders the list page by default", () => {
+    renderApp();
 
-    render(<App />);
-
-    await waitFor(() => {
-      expect(screen.getByText("Mock Event")).toBeInTheDocument();
-    });
+    expect(screen.getByRole("link", { name: /liste/i }).className).toMatch(/active/);
   });
 
-  it("shows error when fetch fails", async () => {
-    vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Failed to fetch"));
+  it("renders the calendar page on /calendar", () => {
+    renderApp("/calendar");
 
-    render(<App />);
-
-    await waitFor(() => {
-      expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();
-    });
+    expect(screen.getByRole("link", { name: /kalender/i }).className).toMatch(/active/);
   });
 });

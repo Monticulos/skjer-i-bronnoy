@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Spinner, Alert, Paragraph } from '@digdir/designsystemet-react';
+import { Paragraph } from '@digdir/designsystemet-react';
 import type { Event } from '../../types/event';
 import { useEventFiltering } from '../../hooks/useEventFiltering';
 import { useFavorites } from '../../hooks/useFavorites';
@@ -12,13 +12,11 @@ import styles from './EventList.module.css';
 
 interface Props {
   events: Event[];
-  loading: boolean;
-  error: string | null;
 }
 
 const alwaysFavorited = () => true;
 
-export default function EventList({ events, loading, error }: Props) {
+export default function EventList({ events }: Props) {
   const upcomingEvents = useMemo(() => getUpcomingEvents(events), [events]);
   const { favoriteIds, isFavorite, toggleFavorite } = useFavorites();
 
@@ -37,13 +35,6 @@ export default function EventList({ events, loading, error }: Props) {
   );
 
   const monthGroups = useMemo(() => groupByMonth(filteredEvents), [filteredEvents]);
-
-  if (loading) return (
-    <div className={styles.statusContainer}>
-      <Spinner aria-label="Laster arrangementer" />
-    </div>
-  );
-  if (error) return <Alert data-color="danger">Kunne ikke laste data: {error}</Alert>;
 
   if (upcomingEvents.length === 0) {
     return <Paragraph className={styles.statusContainer}>Ingen kommende arrangementer.</Paragraph>;

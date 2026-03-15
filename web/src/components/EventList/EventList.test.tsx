@@ -27,17 +27,6 @@ describe("EventList", () => {
     vi.useRealTimers();
   });
 
-  it("shows spinner when loading", () => {
-    render(<EventList events={[]} loading={true} error={null} />);
-    expect(screen.getByLabelText("Laster arrangementer")).toBeInTheDocument();
-  });
-
-  it("shows error alert when error is set", () => {
-    render(<EventList events={[]} loading={false} error="Network error" />);
-    expect(screen.getByText(/Kunne ikke laste data/)).toBeInTheDocument();
-    expect(screen.getByText(/Network error/)).toBeInTheDocument();
-  });
-
   it("shows upcoming events", () => {
     const upcomingEvent = createEvent({
       id: "1",
@@ -45,7 +34,7 @@ describe("EventList", () => {
       startDate: "2025-06-20T10:00:00Z",
     });
 
-    render(<EventList events={[upcomingEvent]} loading={false} error={null} />);
+    render(<EventList events={[upcomingEvent]} />);
     expect(screen.getByText("Future Event")).toBeInTheDocument();
   });
 
@@ -56,7 +45,7 @@ describe("EventList", () => {
       startDate: "2025-05-01T10:00:00Z",
     });
 
-    render(<EventList events={[pastEvent]} loading={false} error={null} />);
+    render(<EventList events={[pastEvent]} />);
     expect(screen.getByText(/Ingen kommende arrangementer/)).toBeInTheDocument();
   });
 
@@ -66,7 +55,7 @@ describe("EventList", () => {
       createEvent({ id: "2", title: "Future Event", startDate: "2025-07-01T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
     expect(screen.getByText("Future Event")).toBeInTheDocument();
     expect(screen.queryByText("Past Event")).not.toBeInTheDocument();
   });
@@ -77,14 +66,9 @@ describe("EventList", () => {
       createEvent({ id: "2", title: "Football", category: "kino", startDate: "2025-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
     expect(screen.getByText("Concert")).toBeInTheDocument();
     expect(screen.getByText("Football")).toBeInTheDocument();
-  });
-
-  it("does not show filter chips in loading state", () => {
-    render(<EventList events={[]} loading={true} error={null} />);
-    expect(screen.queryByRole("group", { name: "Filter" })).not.toBeInTheDocument();
   });
 
   it("does not show filter chips when no upcoming events", () => {
@@ -94,14 +78,14 @@ describe("EventList", () => {
       startDate: "2025-05-01T10:00:00Z",
     });
 
-    render(<EventList events={[pastEvent]} loading={false} error={null} />);
+    render(<EventList events={[pastEvent]} />);
     expect(screen.queryByRole("group", { name: "Filter" })).not.toBeInTheDocument();
   });
 
   it("does not show Favoritter section by default", () => {
     const event = createEvent({ id: "1", title: "Future Event", startDate: "2025-06-20T10:00:00Z" });
 
-    render(<EventList events={[event]} loading={false} error={null} />);
+    render(<EventList events={[event]} />);
     expect(screen.queryByRole("heading", { name: "Favoritter" })).not.toBeInTheDocument();
   });
 
@@ -113,7 +97,7 @@ describe("EventList", () => {
       createEvent({ id: "future-1", title: "Future Event", startDate: "2025-06-20T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     expect(screen.queryByRole("heading", { name: "Favoritter" })).not.toBeInTheDocument();
   });
@@ -132,7 +116,7 @@ describe("EventList favorites", () => {
     const user = userEvent.setup();
     const event = createFutureEvent({ id: "1", title: "Future Event" });
 
-    render(<EventList events={[event]} loading={false} error={null} />);
+    render(<EventList events={[event]} />);
 
     await user.click(screen.getByRole("button", { name: "Legg til i favoritter" }));
 
@@ -143,7 +127,7 @@ describe("EventList favorites", () => {
     const user = userEvent.setup();
     const event = createFutureEvent({ id: "1", title: "Future Event" });
 
-    render(<EventList events={[event]} loading={false} error={null} />);
+    render(<EventList events={[event]} />);
 
     await user.click(screen.getByRole("button", { name: "Legg til i favoritter" }));
 
@@ -159,7 +143,7 @@ describe("EventList favorites", () => {
       createFutureEvent({ id: "future-2", title: "Fotball", category: "kino", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
     expect(screen.getByRole("heading", { name: "Favoritter" })).toBeInTheDocument();
 
     await user.click(screen.getByRole("checkbox", { name: "Kino" }));
@@ -175,7 +159,7 @@ describe("EventList favorites", () => {
       createFutureEvent({ id: "future-1", title: "Konsert" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
     expect(screen.getByRole("heading", { name: "Favoritter" })).toBeInTheDocument();
 
     await user.type(screen.getByRole("searchbox"), "fotball");
@@ -187,7 +171,7 @@ describe("EventList favorites", () => {
     const user = userEvent.setup();
     const event = createFutureEvent({ id: "1", title: "Future Event" });
 
-    render(<EventList events={[event]} loading={false} error={null} />);
+    render(<EventList events={[event]} />);
 
     await user.click(screen.getByRole("button", { name: "Legg til i favoritter" }));
     expect(screen.getByRole("heading", { name: "Favoritter" })).toBeInTheDocument();
@@ -210,7 +194,7 @@ describe("EventList category filtering", () => {
       createFutureEvent({ id: "2", title: "Football", category: "kino", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.click(screen.getByRole("checkbox", { name: "Musikk" }));
 
@@ -225,7 +209,7 @@ describe("EventList category filtering", () => {
       createFutureEvent({ id: "2", title: "Football", category: "kino", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.click(screen.getByRole("checkbox", { name: "Kino" }));
 
@@ -240,7 +224,7 @@ describe("EventList category filtering", () => {
       createFutureEvent({ id: "2", title: "Football", category: "kino", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.click(screen.getByRole("checkbox", { name: "Musikk" }));
     expect(screen.queryByText("Football")).not.toBeInTheDocument();
@@ -263,7 +247,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "2", title: "Fotballkamp", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.type(screen.getByRole("searchbox"), "konsert");
 
@@ -278,7 +262,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "2", title: "Event B", description: "Håndball", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.type(screen.getByRole("searchbox"), "jazz");
 
@@ -293,7 +277,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "2", title: "Event B", location: "Salhus arena", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.type(screen.getByRole("searchbox"), "salhus");
 
@@ -307,7 +291,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "1", title: "Konsert" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.type(screen.getByRole("searchbox"), "finnes ikke");
 
@@ -321,7 +305,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "2", title: "Fotballkamp", startDate: "2099-06-21T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.type(screen.getByRole("searchbox"), "konsert");
     expect(screen.queryByText("Fotballkamp")).not.toBeInTheDocument();
@@ -339,7 +323,7 @@ describe("EventList search filtering", () => {
       createFutureEvent({ id: "3", title: "Fotballkamp", category: "kino", startDate: "2099-06-22T10:00:00Z" }),
     ];
 
-    render(<EventList events={events} loading={false} error={null} />);
+    render(<EventList events={events} />);
 
     await user.click(screen.getByRole("checkbox", { name: "Musikk" }));
     await user.type(screen.getByRole("searchbox"), "jazz");

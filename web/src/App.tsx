@@ -1,43 +1,22 @@
-import { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import EventList from "./components/EventList/EventList";
+import ViewNavigation from "./components/ViewNavigation/ViewNavigation";
+import eventsData from "../public/data/events.json";
 import type { EventsData } from "./types/event";
+import type { ViewOutletContext } from "./types/outletContext";
 import styles from "./App.module.css";
 
-const EVENTS_DATA_URL = "data/events.json";
-
 export default function App() {
-  const [events, setEvents] = useState<EventsData["events"]>([]);
-  const [updatedAt, setUpdatedAt] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch(EVENTS_DATA_URL)
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<EventsData>;
-      })
-      .then((data) => {
-        setUpdatedAt(data.updatedAt);
-        setEvents(data.events);
-      })
-      .catch((fetchError: Error) => setError(fetchError.message))
-      .finally(() => setLoading(false));
-  }, []);
+  const { events, updatedAt } = eventsData as EventsData;
+  const outletContext: ViewOutletContext = { events };
 
   return (
     <>
       <Header />
+      <ViewNavigation />
       <main className={styles.main}>
-        <div className={styles.inner}>
-          <EventList
-            events={events}
-            loading={loading}
-            error={error}
-          />
-        </div>
+        <Outlet context={outletContext} />
       </main>
       <Footer updatedAt={updatedAt} />
     </>
