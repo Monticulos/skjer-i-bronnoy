@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-16T04:47:39.375Z",
+  "updatedAt": "2026-03-17T04:24:57.280Z",
   "events": [
     {
       "id": "2129729637781721",
@@ -62,14 +62,14 @@
       "collectedAt": "2026-03-16T04:47:33.856Z"
     },
     {
-      "title": "Trille-Tralle-Treff (babysang)",
+      "title": "Barn og unge - Kefas",
       "description": "Barn og unge - Kefas",
-      "category": "tro-og-livssyn",
+      "category": "barn-og-ungdom",
       "startDate": "2026-03-18T10:00:00.000Z",
       "location": "Brønnøy kirke",
       "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=1e0d1295-f3e2-475c-ad1f-0a20daaf0366&OccurenceId=dee8135a-44ee-4bf7-99bf-6cd2c45b17e8",
       "id": "Brønnøy-kirke-2026-03-18T10:00:00.000Z",
-      "collectedAt": "2026-03-16T04:46:15.367Z"
+      "collectedAt": "2026-03-17T04:24:57.278Z"
     },
     {
       "id": "1400890462144393",
@@ -83,33 +83,33 @@
     },
     {
       "title": "Operasjon Bever",
-      "description": "Operasjon Bever",
+      "description": "Operasjon Bever 18.03.26 kl. 18:00",
       "category": "kino",
       "startDate": "2026-03-18T17:00:00.000Z",
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-18T17:00:00.000Z",
-      "collectedAt": "2026-03-16T04:45:32.662Z"
+      "collectedAt": "2026-03-17T04:24:13.966Z"
     },
     {
       "title": "Hamnet",
-      "description": "Hamnet",
+      "description": "Hamnet 18.03.26 kl. 20:00",
       "category": "kino",
       "startDate": "2026-03-18T19:00:00.000Z",
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-18T19:00:00.000Z",
-      "collectedAt": "2026-03-16T04:45:32.662Z"
+      "collectedAt": "2026-03-17T04:24:13.966Z"
     },
     {
-      "title": "Gudstjeneste",
+      "title": "Gudstjeneste - Sykehjemmets kapell",
       "description": "Gudstjeneste - Sykehjemmets kapell",
       "category": "tro-og-livssyn",
       "startDate": "2026-03-19T10:30:00.000Z",
       "location": "Brønnøy kirke",
-      "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=53891794-5db0-4f2b-9f44-01aa734b1b00&OccurenceId=53891794-5db0-4f2b-9f44-01aa734b1b00",
+      "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=53891794-5db0-4f2b-9f44-01aa734b1b00&OccurenceId=53891794-5db0-4f2b-01aa734b1b00",
       "id": "Brønnøy-kirke-2026-03-19T10:30:00.000Z",
-      "collectedAt": "2026-03-16T04:46:15.367Z"
+      "collectedAt": "2026-03-17T04:24:57.278Z"
     },
     {
       "title": "Formiddagsfilmen: LOOP (2005)",
@@ -133,13 +133,13 @@
     },
     {
       "title": "Håndbok For Superhelter",
-      "description": "Håndbok For Superhelter",
+      "description": "Håndbok For Superhelter 19.03.26 kl. 18:00",
       "category": "kino",
       "startDate": "2026-03-19T17:00:00.000Z",
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-19T17:00:00.000Z",
-      "collectedAt": "2026-03-16T04:45:32.662Z"
+      "collectedAt": "2026-03-17T04:24:13.966Z"
     },
     {
       "id": "1219326520187197",
@@ -153,13 +153,13 @@
     },
     {
       "title": "Minner Om Ham",
-      "description": "Minner Om Ham",
+      "description": "Minner Om Ham 20.03.26 kl.18:00",
       "category": "kino",
       "startDate": "2026-03-20T17:00:00.000Z",
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T17:00:00.000Z",
-      "collectedAt": "2026-03-16T04:45:32.662Z"
+      "collectedAt": "2026-03-17T04:24:13.966Z"
     },
     {
       "id": "1592827455088754",
@@ -183,13 +183,13 @@
     },
     {
       "title": "Ready Or Not 2: Here I Come",
-      "description": "Ready Or Not 2: Here I Come",
+      "description": "Ready Or Not 2: Here I Come 20.03.26 kl.20:00",
       "category": "kino",
       "startDate": "2026-03-20T19:00:00.000Z",
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T19:00:00.000Z",
-      "collectedAt": "2026-03-16T04:45:32.662Z"
+      "collectedAt": "2026-03-17T04:24:13.966Z"
     },
     {
       "id": "1447165753569546",
@@ -202,14 +202,14 @@
       "collectedAt": "2026-03-16T04:47:39.374Z"
     },
     {
-      "title": "Gudstjeneste",
+      "title": "Gudstjeneste - Brønnøy kirke",
       "description": "Gudstjeneste - Brønnøy kirke",
       "category": "tro-og-livssyn",
       "startDate": "2026-03-22T10:00:00.000Z",
       "location": "Brønnøy kirke",
       "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=629b5fec-acb3-43e9-b6be-e7771a0841ca&OccurenceId=629b5fec-acb3-43e9-b6be-e7771a0841ca",
       "id": "Brønnøy-kirke-2026-03-22T10:00:00.000Z",
-      "collectedAt": "2026-03-16T04:46:15.367Z"
+      "collectedAt": "2026-03-17T04:24:57.278Z"
     },
     {
       "title": "Barseltreff på bibliotek",
@@ -232,14 +232,14 @@
       "collectedAt": "2026-03-08T15:20:11.243Z"
     },
     {
-      "title": "Trille-Tralle-Treff (babysang)",
+      "title": "Barn og unge - Kefas",
       "description": "Barn og unge - Kefas",
-      "category": "tro-og-livssyn",
+      "category": "barn-og-ungdom",
       "startDate": "2026-03-25T10:00:00.000Z",
       "location": "Brønnøy kirke",
       "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=1e0d1295-f3e2-475c-ad1f-0a20daaf0366&OccurenceId=22c53a4a-b808-4114-98d3-5f805277927b",
       "id": "Brønnøy-kirke-2026-03-25T10:00:00.000Z",
-      "collectedAt": "2026-03-16T04:46:15.367Z"
+      "collectedAt": "2026-03-17T04:24:57.278Z"
     },
     {
       "id": "1294529529407941",
@@ -312,6 +312,16 @@
       "collectedAt": "2026-03-08T15:20:11.243Z"
     },
     {
+      "title": "Påskejam",
+      "description": "Vi gjør klart for en lang tradisjon, nemlig påskejam på Kred. Vi håper spesielt på besøk av musikere som har lyst til å spille hos oss denne kvelden.",
+      "category": "musikk",
+      "startDate": "2026-04-01T20:00:00.000Z",
+      "location": "Kred",
+      "url": "https://www.cafekred.no/b/paaskejam---onsdag-1-april-kl-2200",
+      "id": "Kred-2026-04-01T20:00:00.000Z",
+      "collectedAt": "2026-03-17T04:24:23.965Z"
+    },
+    {
       "id": "697852660015589",
       "title": "PåskeQuiz på Kred",
       "description": "Kred har avholdt påskequiz, (nesten) hver eneste skjærtorsdag i mange år. Dette er blitt en tradisjon for oss.\n\nDet blir å skje i år også, så velkommen til påskequiz folkens!\nTidspunkt, kl. 20.00!",
@@ -320,6 +330,26 @@
       "location": "Kred",
       "url": "https://www.facebook.com/events/697852660015589/",
       "collectedAt": "2026-03-16T04:47:38.260Z"
+    },
+    {
+      "title": "Kred's Påskemusikkbingo",
+      "description": "Det er påske og mange har ferie. Ta turen innom og bli med på Kred's Påskemusikkbingo! Ha det gøy med vårt nyeste underholdningskonsept. Temaene er ikke bestemt enda, men det blir nok noe påske- og afterskirelatert tenker vi.",
+      "category": "quiz",
+      "startDate": "2026-04-03T19:00:00.000Z",
+      "location": "Kred",
+      "url": "https://www.cafekred.no/b/kreds-paaskemusikkbingo---langfredag-3-april-kl-2100",
+      "id": "Kred-2026-04-03T19:00:00.000Z",
+      "collectedAt": "2026-03-17T04:24:23.965Z"
+    },
+    {
+      "title": "Catillus",
+      "description": "Catillus er et nytt band fra Sør-Helgeland. De har et bredbeint musikalsk nedslagsfelt som omfavner kategorier som rock, blues, pop, jazz og fusion. Noen av bandmedlemmene har også et hjerte for progrock, som nok kommer til uttrykk på noen låter.",
+      "category": "musikk",
+      "startDate": "2026-04-04T20:30:00.000Z",
+      "location": "Kred",
+      "url": "https://www.cafekred.no/b/catillus---paaskeaften-4-april-kl-2230",
+      "id": "Kred-2026-04-04T20:30:00.000Z",
+      "collectedAt": "2026-03-17T04:24:23.965Z"
     },
     {
       "title": "Barseltreff på bibliotek",
