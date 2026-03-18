@@ -7,6 +7,8 @@ const TRUNCATION_MARKER = "\n...[truncated]";
 const ELEMENTS_TO_REMOVE = "script, style, noscript, nav, footer, header, aside, link, meta";
 const NON_ANCHOR_TAG = /<(?!\/?a[\s>])[^>]*>/gi;
 const CONSECUTIVE_WHITESPACE = /\s+/g;
+const TIMEZONE = "Europe/Oslo";
+
 
 async function launchBrowserAndNavigate(url: string) {
   const browser = await puppeteer.launch({
@@ -14,6 +16,7 @@ async function launchBrowserAndNavigate(url: string) {
     args: process.env.CI ? ["--no-sandbox"] : [],
   });
   const page = await browser.newPage();
+  await page.emulateTimezone(TIMEZONE);
   await page.goto(url, { waitUntil: "networkidle2" });
   return { browser, page };
 }
@@ -32,7 +35,7 @@ export function truncateText(text: string): string {
 
 export async function extractEvents(source: Source): Promise<string> {
   const { browser, page } = await launchBrowserAndNavigate(source.url);
-
+  
   try {
     const selector = source.selector ?? "body";
     const html = await page.$eval(selector, (el) => el.innerHTML);
