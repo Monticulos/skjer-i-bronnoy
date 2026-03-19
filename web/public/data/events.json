@@ -1,36 +1,6 @@
 {
-  "updatedAt": "2026-03-18T04:30:58.568Z",
+  "updatedAt": "2026-03-19T04:28:36.851Z",
   "events": [
-    {
-      "id": "1290807762936378",
-      "title": "UTSATT TIL APRIL/MAI - Gründerkveld på MEIR ",
-      "description": "Velkommen til en lavterskel møteplass på Gründerhuset ME!R for du som har starta, eller er interessert i å starte, virksomhet på Sør-Helgeland. \n\nDet blir gratis pizza, nettverksbygging & inspirasjonsprat med gründere.\n\nVil du ha pizza? Husk å melde deg på: https://forms.office.com/e/hN0LgaznsC\n\nArrangementet arrangeres av de gode hjelperne (Kunnskapsparken Helgeland, Sentrum Næringshage og Kystinkubatoren) som er finansiert av Nordland Fylkeskommune.  Vertsskap er Brønnøy Næringsforum sitt nye lokale. ",
-      "category": "næringsliv",
-      "startDate": "2026-03-17T18:00:00.000Z",
-      "location": "Storgata 51, 8900 Brønnøysund, Norge",
-      "url": "https://www.facebook.com/events/1290807762936378/",
-      "collectedAt": "2026-03-16T04:47:33.856Z"
-    },
-    {
-      "title": "Barn og unge - Kefas",
-      "description": "Barn og unge - Kefas",
-      "category": "barn-og-ungdom",
-      "startDate": "2026-03-18T10:00:00.000Z",
-      "location": "Brønnøy kirke",
-      "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=1e0d1295-f3e2-475c-ad1f-0a20daaf0366&OccurenceId=dee8135a-44ee-4bf7-99bf-6cd2c45b17e8",
-      "id": "Brønnøy-kirke-2026-03-18T10:00:00.000Z",
-      "collectedAt": "2026-03-17T04:24:57.278Z"
-    },
-    {
-      "id": "1400890462144393",
-      "title": "SkatteFUNN-seminar i Brønnøy",
-      "description": "Jobber din bedrift med å utvikle nye varer og tjenester eller en ny produksjonsprosess? Gjennom SkatteFUNN kan du få dekket inntil 19 % av utviklingsutgiftene dine. \n\nI samarbeid mellom Kunnskapsparken Helgeland, Sentrum Næringshage, Kystinkubatoren og Forskningsrådet arrangeres seminar med informasjon om SkatteFUNN ordningen.  \n  \nSkatteFUNN er en enkel og effektiv skattefradragsordning. I seminaret får du informasjon om hvilke typer forsknings- og utviklingsaktiviteter ordningen omfatter. Du får også tips og råd i forhold til selve søknadsprosessen, hvilke kriterier som vurderes, hvem som kan hjelpe deg, og hva du bør passe på å tydeliggjøre når du beskriver prosjektet ditt.  \n\nDette er for bedrifter, samarbeidspartnere og alle som planlegger kunnskapsarbeid, eller forskningsprosjekter i forbindelse med utvikling av nye varer, tjenester eller produksjonsprosesser.\n\nSentrale stikkord for seminaret her:\n•\tHva er SkatteFUNN \n•\tHva er forsking og utvikling, og hvilke prosjekter er det som faller utenfor \n•\tGod prosjektstruktur \n•\tProsjekteksempler \n•\tMuligheter og begrensninger \n•\tEvt. behov for oppfølging \n\nDet er flott dersom deltagerne har med egne ideer eller case som de evt. ønsker å diskutere i plenum eller 1:1 i etterkant av seminaret. \n",
-      "category": "næringsliv",
-      "startDate": "2026-03-18T11:00:00.000Z",
-      "location": "Storgata 51, 8900 Brønnøysund, Norge",
-      "url": "https://www.facebook.com/events/1400890462144393/",
-      "collectedAt": "2026-03-10T04:13:20.847Z"
-    },
     {
       "title": "Operasjon Bever",
       "description": "Operasjon Bever",
@@ -39,7 +9,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-18T17:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "title": "Hamnet",
@@ -49,7 +19,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-18T19:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "id": "908884368693671",
@@ -62,14 +32,14 @@
       "collectedAt": "2026-03-18T04:30:58.096Z"
     },
     {
-      "title": "Gudstjeneste - Sykehjemmets kapell",
+      "title": "Gudstjeneste",
       "description": "Gudstjeneste - Sykehjemmets kapell",
       "category": "tro-og-livssyn",
       "startDate": "2026-03-19T10:30:00.000Z",
       "location": "Brønnøy kirke",
-      "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=53891794-5db0-4f2b-9f44-01aa734b1b00&OccurenceId=53891794-5db0-4f2b-01aa734b1b00",
+      "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=53891794-5db0-4f2b-9f44-01aa734b1b00&OccurenceId=53891794-5db0-4f2b-9f44-01aa734b1b00",
       "id": "Brønnøy-kirke-2026-03-19T10:30:00.000Z",
-      "collectedAt": "2026-03-17T04:24:57.278Z"
+      "collectedAt": "2026-03-19T04:28:36.851Z"
     },
     {
       "id": "1640615373946004",
@@ -89,7 +59,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-19T17:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "id": "1219326520187197",
@@ -109,7 +79,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T17:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "id": "1592827455088754",
@@ -139,7 +109,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T19:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "id": "1447165753569546",
@@ -152,14 +122,14 @@
       "collectedAt": "2026-03-18T04:30:51.636Z"
     },
     {
-      "title": "Gudstjeneste - Brønnøy kirke",
+      "title": "Gudstjeneste",
       "description": "Gudstjeneste - Brønnøy kirke",
       "category": "tro-og-livssyn",
       "startDate": "2026-03-22T10:00:00.000Z",
       "location": "Brønnøy kirke",
       "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=629b5fec-acb3-43e9-b6be-e7771a0841ca&OccurenceId=629b5fec-acb3-43e9-b6be-e7771a0841ca",
       "id": "Brønnøy-kirke-2026-03-22T10:00:00.000Z",
-      "collectedAt": "2026-03-17T04:24:57.278Z"
+      "collectedAt": "2026-03-19T04:28:36.851Z"
     },
     {
       "title": "Barseltreff på bibliotek",
@@ -179,7 +149,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-24T17:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
       "title": "Project Hail Mary",
@@ -189,17 +159,17 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-24T19:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:32.896Z"
+      "collectedAt": "2026-03-19T04:28:01.017Z"
     },
     {
-      "title": "Barn og unge - Kefas",
+      "title": "Trille-Tralle-Treff (babysang)",
       "description": "Barn og unge - Kefas",
       "category": "barn-og-ungdom",
       "startDate": "2026-03-25T10:00:00.000Z",
       "location": "Brønnøy kirke",
       "url": "https://www.bronnoy.kirken.no/Kalenderdetaljer?Publish=Polo&Att=Nei&EventId=1e0d1295-f3e2-475c-ad1f-0a20daaf0366&OccurenceId=22c53a4a-b808-4114-98d3-5f805277927b",
       "id": "Brønnøy-kirke-2026-03-25T10:00:00.000Z",
-      "collectedAt": "2026-03-17T04:24:57.278Z"
+      "collectedAt": "2026-03-19T04:28:36.851Z"
     },
     {
       "id": "1294529529407941",
@@ -309,7 +279,7 @@
       "location": "Kred",
       "url": "https://www.cafekred.no/b/kreds-paaskemusikkbingo---langfredag-3-april-kl-2100",
       "id": "Kred-2026-04-03T19:00:00.000Z",
-      "collectedAt": "2026-03-18T04:29:41.525Z"
+      "collectedAt": "2026-03-19T04:28:09.706Z"
     },
     {
       "id": "1867508743969239",
