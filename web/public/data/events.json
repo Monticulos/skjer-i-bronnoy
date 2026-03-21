@@ -1,26 +1,6 @@
 {
-  "updatedAt": "2026-03-20T04:22:12.944Z",
+  "updatedAt": "2026-03-21T04:10:45.396Z",
   "events": [
-    {
-      "title": "Håndbok For Superhelter",
-      "description": "Håndbok For Superhelter",
-      "category": "kino",
-      "startDate": "2026-03-19T17:00:00.000Z",
-      "location": "Brønnøy kino",
-      "url": "https://www.bronnoy.kommune.no/kino/",
-      "id": "Brønnøy-kino-2026-03-19T17:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:12.477Z"
-    },
-    {
-      "id": "1219326520187197",
-      "title": "AFTERWORK PÅ SVANG: JERK CHICKEN!",
-      "description": "Bli med oss hver fredag året rundt på \"afterwork\". SVANG er plassen å være for deg som liker å kickstarte helgen med god stemning, street food og smaker fra hele verden, herlig musikk og vennlige priser på både mat og drikke.\nKom å feire på helg på Svang. Ta med en venn eller ti og starte helgen med stil.\nFra kl. 15 - 18, ingen bordbestilling og til vi er tømt med første man til mølla prinsippet.\nDette er konsept som er gøyal, fargerik og som vi streker oss langt for at det skal være vennlig mot pængboka 😃 Vi ser frem å møte dere på Svang, hver fredag!!\nPris: 210,-",
-      "category": "mat-og-drikke",
-      "startDate": "2026-03-20T14:00:00.000Z",
-      "location": "Svang",
-      "url": "https://www.facebook.com/events/1219326520187197/",
-      "collectedAt": "2026-03-20T04:22:09.577Z"
-    },
     {
       "title": "Minner Om Ham",
       "description": "Minner Om Ham",
@@ -29,7 +9,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T17:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:12.477Z"
+      "collectedAt": "2026-03-21T04:10:05.279Z"
     },
     {
       "id": "1592827455088754",
@@ -59,7 +39,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-20T19:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:12.477Z"
+      "collectedAt": "2026-03-21T04:10:05.279Z"
     },
     {
       "id": "1447165753569546",
@@ -109,7 +89,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-24T17:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:12.477Z"
+      "collectedAt": "2026-03-21T04:10:05.279Z"
     },
     {
       "title": "Project Hail Mary",
@@ -119,7 +99,7 @@
       "location": "Brønnøy kino",
       "url": "https://www.bronnoy.kommune.no/kino/",
       "id": "Brønnøy-kino-2026-03-24T19:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:12.477Z"
+      "collectedAt": "2026-03-21T04:10:05.279Z"
     },
     {
       "title": "Trille-Tralle-Treff (babysang)",
@@ -249,7 +229,7 @@
       "location": "Kred",
       "url": "https://www.cafekred.no/b/kreds-paaskemusikkbingo---langfredag-3-april-kl-2100",
       "id": "Kred-2026-04-03T19:00:00.000Z",
-      "collectedAt": "2026-03-20T04:20:25.015Z"
+      "collectedAt": "2026-03-21T04:10:16.848Z"
     },
     {
       "id": "1867508743969239",
